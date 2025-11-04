@@ -14,12 +14,9 @@ for (let i = 0; i < 10; i++) {
 }
 
 // Clear all files (make them empty)
-files.forEach((file) => {
-  fs.writeFileSync(`${dirPath}/${file}`, "", "utf-8");
-});
-
 // Write random number of rows (1–10) to each file
 files.forEach((file) => {
+  fs.writeFileSync(`${dirPath}/${file}`, "", "utf-8");
   let i = Math.floor(Math.random() * 10) + 1; // Random number of rows
   for (let j = 1; j < i; j++)
     fs.writeFileSync(`${dirPath}/${file}`, `${file} row ${j}\n`, { flag: "a" }); // Write with newline
