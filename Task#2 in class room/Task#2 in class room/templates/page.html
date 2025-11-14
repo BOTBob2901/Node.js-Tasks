@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NodeJs Homework</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0%;
+        padding: 0%;
+      }
+
+      h1 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: rgb(0, 40, 160);
+        margin-top: 15px;
+      }
+
+      .mainDiv {
+        margin-block: 2%;
+        margin-inline: 32%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: column;
+        background-color: rgb(224, 238, 250);
+      }
+
+      .innerDiv {
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 300px;
+      }
+
+      .top {
+        position: relative;
+        height: 100px;
+        background-color: lightgray;
+      }
+      .top > p {
+        position: absolute;
+        font-size: 0.65em;
+        text-align: end;
+        justify-content: end;
+        margin-left: 100px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        width: 180px;
+        color: rgb(50, 51, 48);
+      }
+
+      .top span {
+        position: absolute;
+        font-weight: bold;
+        font-size: 1.1em;
+        margin-top: 70px;
+        margin-left: 145px;
+        width: 150px;
+        color: rgb(50, 51, 48);
+      }
+
+      .small {
+        position: absolute;
+        margin-left: 20px;
+        background-color: rgb(50, 51, 48);
+      }
+
+      .small > p {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        color: white;
+        font-size: 0.8em;
+        padding: 2px;
+      }
+
+      .mid {
+        position: relative;
+        height: 120px;
+        background-color: white;
+      }
+
+      .mid > h2 {
+        position: absolute;
+        text-align: end;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        font-weight: 700;
+        font-size: 2.9em;
+        margin-top: 5px;
+        margin-right: 10px;
+        color: rgb(50, 51, 48);
+      }
+
+      .bottom {
+        position: relative;
+        height: 200px;
+        background-color: rgb(240, 219, 79);
+      }
+
+      .bottom > p {
+        position: absolute;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        font-weight: bolder;
+        font-size: 13em;
+        margin-top: -20px;
+        margin-left: 70px;
+        color: rgb(50, 51, 48);
+      }
+
+      .bottom > span {
+        position: relative;
+        display: inline-block;
+        color: rgb(240, 219, 79);
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 0.9em;
+        margin-top: 85px;
+        margin-left: 90px;
+        transform: rotate(-90deg);
+      }
+
+      #author {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 1.4em;
+        margin-block: 50px;
+        color: rgb(0, 100, 180);
+      }
+
+      #paragraph {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        margin-bottom: 50px;
+        font-size: 1.2em;
+        width: 450px;
+      }
+
+      #copyright {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-weight: bold;
+        color: rgb(0, 70, 160);
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- use template -->
+    <div class="mainDiv">
+      <h1>{h1-heading}</h1>
+      <div class="innerDiv">
+        <div class="top">
+          <div class="small">
+            <p>OPTSLLY"</p>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+            consequatur ex delectus provident quibusdam?.
+          </p>
+          <span>KYLE SIMPSON</span>
+        </div>
+        <div class="mid">
+          <h2>SCOPE & CLOSURES</h2>
+        </div>
+        <div class="bottom">
+          <p>JS</p>
+          <span>YOU DON'T KNOW</span>
+        </div>
+      </div>
+      <p id="author">By Kyle Simpson</p>
+      <p id="paragraph">
+        Parts of the language that many JavaScript programmers simply avoid.
+      </p>
+      <aside id="copyright">&copy; 2021 Tiana</aside>
+    </div>
+  </body>
+</html>
