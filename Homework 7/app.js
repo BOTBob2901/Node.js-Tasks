@@ -16,12 +16,14 @@ const server = http.createServer(function (req, res) {
 
   // Route to Homepage
   if (pathName === "/" || pathName === "/page") {
+    // Check if requested path is the Homepage
     const htmlPath = path.join(__dirname, "Templates/html/page.html"); // Homepage html file path
     const fileStream = fs.createReadStream(htmlPath, "UTF-8"); // Create a fileStream for the file.
     res.writeHead(200, { "Content-Type": "text/html" });
     fileStream.pipe(res); // Send the file to client
 
     // Route to Other HTML files
+    // Check if requested path end with a ".html"
   } else if (req.url.match("[.]html$")) {
     const htmlPath = path.join(__dirname, "Templates/html/", req.url); // Requested html page file path
     const fileStream = fs.createReadStream(htmlPath, "UTF-8"); // Create a fileStream for the file.
@@ -29,6 +31,7 @@ const server = http.createServer(function (req, res) {
     fileStream.pipe(res); // Send the file to client
 
     // Route CSS files
+    // Check if requested path end with a ".css"
   } else if (req.url.match("[.]css$")) {
     const cssPath = path.join(__dirname, "Templates/", req.url); // Requested CSS file path
     const fileStream = fs.createReadStream(cssPath, "UTF-8"); // Create a fileStream for the file.
@@ -36,13 +39,14 @@ const server = http.createServer(function (req, res) {
     fileStream.pipe(res); // Send the file to client
 
     // Route Images of type jpg
+    // Check if requested path end with a ".jpg"
   } else if (req.url.match("[.]jpg$")) {
     const jpgPath = path.join(__dirname, "Templates/", req.url); // Requested Image file path
     const fileStream = fs.createReadStream(jpgPath); // Create a fileStream for the file.
     res.writeHead(200, { "Content-Type": "image/jpg" });
     fileStream.pipe(res); // Send the file to client
 
-    // Route Error 404: Not fount
+    // Route Error 404: Not found
   } else {
     res.writeHead(404, { "Content-Type": "text/html" });
     res.end("<h1>Page not found</h1>"); // Send a hardcoded message to the client
