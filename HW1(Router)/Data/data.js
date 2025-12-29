@@ -1,3 +1,4 @@
+//Igor Nikonov, Saher Haddad 50/1
 const data = {
   products: [
     { id: 1, name: "Laptop", price: 1000, stock: 10 },
